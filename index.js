@@ -1,20 +1,10 @@
-// Title
-// Description
-// Table of Contents (contains corresponding sections)
-// Installation (installation instructions)
-// Usage (usage information)
-// License (badge added near the top of the readme,explains which license the application is covered under)
-// Contribution (contribution guidelines)
-// Tests (test instructions)
-// Questions (get github username, email address-how to reach me with additional questions)
+const inquirer = require("inquirer");
+const fs = require("fs"); 
+const util = require("util");
+const GenerateReadme = require("./util/GenerateReadme");
 
-const inquirer = require('inquirer');
-const fs = require('fs'); 
-const generateReadme = require("./utils/generateReadme");
-const writeFileAsync = util.promisify(fs.writeFile);
-
-const promptUser = () =>{
-return inquirer.prompt([
+inquirer
+.prompt([
     {
       type: 'input',
       name: 'title',
@@ -23,7 +13,7 @@ return inquirer.prompt([
     {
       type: 'input',
       name: 'description',
-      message: 'What is the description for your project?',
+      message: 'Write a short description about your project:',
     },
     {
       type: 'editor',
@@ -48,9 +38,9 @@ return inquirer.prompt([
           "MIT License",
           "Mozilla Public License 2.0",
           "University of Illinois/NCSA Open Source License",
-          "Unlicense",
+          "Unlicensed",
       ],
-      default: "Unlicense"
+      default: "Unlicensed"
     },
     {
       type: 'editor',
@@ -59,13 +49,13 @@ return inquirer.prompt([
     },
     {
       type: 'editor',
-      name: 'test',
-      message: 'What are the steps to test your project?',
+      name: 'contributing_guidelines',
+      message: 'Are there any contributing guidelines? If so, please add the information:',
     },
     {
-      type: 'input',
-      name: 'name',
-      message: 'What is your name?',
+      type: 'editor',
+      name: 'test',
+      message: 'What are the steps to test your project?',
     },
     {
       type: 'input',
@@ -77,14 +67,27 @@ return inquirer.prompt([
       name: 'email',
       message: 'What is your email?',
     },
-  ]);
-}
+  ])
+  .then(response => generateReadME(response));
+/*     fs.writeFile(filename, generateContent, (err) =>
+      err ? console.log(err) : console.log('Success!')
+    ); */
 
-  const init = () => {
+
+/*   const init = () => {
     promptUser()
       .then((response) => writeFileAsync('README.md', generateReadme(response)))
       .then(() => console.log('Successfully wrote to markdown file!'))
       .catch((err) => console.error(err));
   };
   
-  init();
+  init(); */
+
+  const generateReadME = (response) =>{
+
+    const generateContent = new GenerateReadme(response);
+/*     console.log(generateContent.readme) */
+
+    fs.writeFileSync('README.md', generateContent.readme);
+
+  }
