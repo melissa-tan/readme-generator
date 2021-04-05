@@ -1,5 +1,5 @@
 
-#Readme Generator
+# Readme Generator
 
 ![license-badge](https://img.shields.io/badge/license-Unlicensed-yellow)
 
@@ -32,11 +32,15 @@ This repository utilizes node.js and inquirer to gather responses from a user an
 	node index
 	```
 	<img src=".\assets\demo\initiate node.gif" width="640" height="360">
-2. Answer the questions as prompted
-https://user-images.githubusercontent.com/51938525/113635347-4f1a1d80-9625-11eb-9006-138c1f64a26c.mp4
+2. Answer the questions as prompted </br>
+	Please click on thumbnail to view video. </br>
+	[![Readme Generator Full Demo](http://img.youtube.com/vi/dFRDGqj7sGQ/0.jpg)](http://www.youtube.com/watch?v=dFRDGqj7sGQ "Readme Generator Full Demo-Click to Watch!")
 
 3. Once all the questions are answered, a success or failure message will display on the terminal.
-4. README.md will be generated in your project repository.
+
+4. README.md will be generated in your project repository. </br>
+	<img src=".\assets\demo\Successfully generated README.gif" width="640" height="360">
+
 
 ## Contribution
 #### Contributors
