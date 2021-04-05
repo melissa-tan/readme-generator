@@ -68,26 +68,13 @@ inquirer
       message: 'What is your email?',
     },
   ])
-  .then(response => generateReadME(response));
-/*     fs.writeFile(filename, generateContent, (err) =>
-      err ? console.log(err) : console.log('Success!')
-    ); */
-
-
-/*   const init = () => {
-    promptUser()
-      .then((response) => writeFileAsync('README.md', generateReadme(response)))
-      .then(() => console.log('Successfully wrote to markdown file!'))
-      .catch((err) => console.error(err));
-  };
-  
-  init(); */
+  .then(response => generateReadME(response))
+  .catch((err) => console.error(err));
 
   const generateReadME = (response) =>{
 
     const generateContent = new GenerateReadme(response);
-/*     console.log(generateContent.readme) */
-
-    fs.writeFileSync('README.md', generateContent.readme);
+    fs.writeFileSync('test.md', generateContent.readme);
+    console.log("Success! README.md was created");
 
   }
