@@ -74,7 +74,7 @@ inquirer
   const generateReadME = (response) =>{
 
     const generateContent = new GenerateReadme(response);
-    fs.writeFileSync('test.md', generateContent.readme);
+    fs.writeFileSync('README.md', generateContent.readme);
     console.log("Success! README.md was created");
 
   }
