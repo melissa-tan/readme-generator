@@ -33,7 +33,9 @@ This repository utilizes node.js and inquirer to gather responses from a user an
 	```
 	<img src=".\assets\demo\initiate node.gif" width="640" height="360">
 2. Answer the questions as prompted
-https://user-images.githubusercontent.com/51938525/113635347-4f1a1d80-9625-11eb-9006-138c1f64a26c.mp4
+<video width="320" height="240" controls>
+  <source src="README full demo.mp4" type="video/mp4">
+</video>
 
 3. Once all the questions are answered, a success or failure message will display on the terminal.
 4. README.md will be generated in your project repository.
