@@ -33,7 +33,7 @@ This repository utilizes node.js and inquirer to gather responses from a user an
 	```
 	<img src=".\assets\demo\initiate node.gif" width="640" height="360">
 2. Answer the questions as prompted
-	![Full Demo Video](README full demo.mp4)
+	[![Readme Generator Full Demo](http://img.youtube.com/vi/dFRDGqj7sGQ/0.jpg)](http://www.youtube.com/watch?v=dFRDGqj7sGQ "Readme Generator Full Demo")
 
 3. Once all the questions are answered, a success or failure message will display on the terminal.
 4. README.md will be generated in your project repository.
