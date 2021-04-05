@@ -28,7 +28,7 @@ ${response.usage}
 
 ## Contribution
 #### Contributors
-${response.contributors}
+${response.contributor}
 
 ${response.contributing_guidelines}
 

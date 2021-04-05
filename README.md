@@ -31,6 +31,7 @@ This repository utilizes node.js and inquirer to gather responses from a user an
 	``` 
 	node index
 	```
+	<img src=".\assets\demo\initiate node.gif" width="640" height="360">
 2. Answer the questions as prompted
 3. Once all the questions are answered, a success or failure message will display on the terminal.
 4. README.md will be generated in your project repository.
